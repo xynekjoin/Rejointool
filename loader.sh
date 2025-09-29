@@ -1,5 +1,5 @@
 #!/bin/bash
-REPO_URL="https://github.com/rejoinrobloxd/roblox-rejoin";REPO_DIR="$HOME/roblox-rejoin";WORK_DIR="$REPO_DIR";LOADER_PATH="/data/data/com.termux/files/usr/bin/loader"
+REPO_URL="https://github.com/xynekjoin/Rejointool";REPO_DIR="$HOME/roblox-rejoin";WORK_DIR="$REPO_DIR";LOADER_PATH="/data/data/com.termux/files/usr/bin/loader"
 [ ! -f "$LOADER_PATH" ]&&{ echo "Tạo 'loader'...";cp "$0" "$LOADER_PATH"&&chmod +x "$LOADER_PATH"&&echo "Xong! Lần sau chỉ cần gõ: loader"||echo "Không thể tạo loader"; }
 command -v git>/dev/null||{ echo "Cài git...";pkg update -y&&pkg install -y git||{ echo "Cài git thất bại";exit 1;}; }
 [ ! -d "$REPO_DIR/.git" ]&&{ echo "Clone repo lần đầu...";git clone "$REPO_URL" "$REPO_DIR"||{ echo "Clone thất bại";exit 1;}; }||{ echo "Pull repo...";cd "$REPO_DIR";git reset --hard;git pull; }
