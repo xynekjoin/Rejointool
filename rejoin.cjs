@@ -82,16 +82,16 @@ class Utils {
       console.log(`🎯 [${packageName}] Sử dụng activity tùy chỉnh: ${activity}`);
     } else {
       // Logic mới: Activity sẽ luôn khớp với prefix của package
-      if (packageName.startsWith(`${prefix}.client.`)) {
-        // Nếu package là custom (có thêm suffix sau client)
-        // Ví dụ: com.robox.client.vnggameu -> com.robox.client.vnggameu/com.robox.client.ActivityProtocolLaunch
-        activity = `${prefix}.client.ActivityProtocolLaunch`;
-      } else if (packageName === `${prefix}.client`) {
-        // Package chính: com.robox.client -> com.robox.client/com.robox.client.ActivityProtocolLaunch
-        activity = `${prefix}.client.ActivityProtocolLaunch`;
+      if (packageName.startsWith(`${prefix}.rulod.`)) {
+        // Nếu package là custom (có thêm suffix sau rulod)
+        // Ví dụ: com.mangcut.rulod.vnggameu -> com.mangcut.rulod.vnggameu/com.mangcut.rulod.ActivityProtocolLaunch
+        activity = `${prefix}.rulod.ActivityProtocolLaunch`;
+      } else if (packageName === `${prefix}.rulod`) {
+        // Package chính: com.mangcut.rulod -> com.mangcut.rulod/com.mangcut.rulod.ActivityProtocolLaunch
+        activity = `${prefix}.rulod.ActivityProtocolLaunch`;
       } else {
         // Fallback: Sử dụng activity chuẩn với prefix hiện tại
-        activity = `${prefix}.client.ActivityProtocolLaunch`;
+        activity = `${prefix}.rulod.ActivityProtocolLaunch`;
       }
       console.log(`🎯 [${packageName}] Sử dụng activity mặc định: ${activity}`);
     }
